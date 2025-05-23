@@ -17,10 +17,28 @@ function createCourse(): {name: string, price: number} {
 // Bad syntax
 let bad = {
     name: "DeltaGrimn",
+    email: "az@gmail.com",
+    isActive: true,
     isPaid: true,
     course: "ReactJS"
 }
 
-createUser(bad);
+// createUser(bad);
+
+type User = {
+    name: string,
+    email: string,
+    isActive: boolean
+}
+
+function editUser(user: User) {
+    console.log(user.name);
+}
+
+editUser({
+    name: "Dest",
+    email: "azkadaiki",
+    isActive: true
+});
 
 export {}

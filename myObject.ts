@@ -25,13 +25,13 @@ let bad = {
 
 // createUser(bad);
 
-type User = {
+type user = {
     name: string,
     email: string,
     isActive: boolean
 }
 
-function editUser(user: User) {
+function editUser(user: user) {
     console.log(user.name);
 }
 
@@ -40,5 +40,34 @@ editUser({
     email: "azkadaiki",
     isActive: true
 });
+
+type user1 = {
+    readonly _id: string,
+    name: string,
+    email: string,
+    isActive: boolean,
+    credit?: number
+}
+
+let myUser: user1 = {
+    _id: "123",
+    name: "Dest",
+    email: "azkadaiki",
+    isActive: true
+}
+
+type cardNumber = {
+    cardNumber: string,
+}
+
+
+type cardDate = {
+    cardDate: string,
+}
+
+type cardDetails = cardNumber & cardDate & {
+    cvv: number
+}
+
 
 export {}

@@ -10,10 +10,19 @@ interface User {
     getCoupon(name: string): number;
 }
 
+interface Admin extends User {
+    role: "admin" | "ta" | "learner"; // Union type
+}
+
+interface User { 
+    githubToken: string;
+}
+
 const dest:User = { 
     dbId: 22,
     email: "dest@gmail.com",
     userId: 1,
+    githubToken: "github123",
 
     // Two ways to define a method
     startTrail: () => {

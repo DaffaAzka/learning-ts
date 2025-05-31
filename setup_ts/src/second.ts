@@ -1,35 +1,35 @@
-interface takePhoto {
-    cameraMode: string,
-    filter: string,
-    burst: number
-}
+// interface takePhoto {
+//     cameraMode: string,
+//     filter: string,
+//     burst: number
+// }
 
-interface Story {
-    createStory(): void
-}
+// interface Story {
+//     createStory(): void
+// }
 
-class Instagram implements takePhoto {
+// class Instagram implements takePhoto {
 
-    constructor(
-        public cameraMode: string,
-        public filter: string,
-        public burst: number
-    ) {}
+//     constructor(
+//         public cameraMode: string,
+//         public filter: string,
+//         public burst: number
+//     ) {}
 
-}
+// }
 
-class Youtube implements takePhoto, Story {
+// class Youtube implements takePhoto, Story {
 
-    constructor(
-        public cameraMode: string,
-        public filter: string,
-        public burst: number,
-        public short: string
-    ) {}
+//     constructor(
+//         public cameraMode: string,
+//         public filter: string,
+//         public burst: number,
+//         public short: string
+//     ) {}
 
-    createStory(): void {
+//     createStory(): void {
         
-    }
+//     }
 
 
-}
+// }

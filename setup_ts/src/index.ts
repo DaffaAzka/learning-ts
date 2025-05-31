@@ -5,18 +5,22 @@ class User {
 
     // let email, name;
 
-    email: string;
-    name: string;
-    city: string = "";
+    // public email: string;
+    // private name: string;
+    private readonly city: string = "Jakarta";
 
-    constructor(email: string, name: string) {
+    constructor(
+        public email: string, 
+        public name: string,
+        private userId: int
+    ) {
         this.email = email,
         this.name = name
     }
 
 }
 
-const dest = new User("azkadaiki@gmail.com", "Dest")
-dest.city = "Jakarta"
+const dest = new User("azkadaiki@gmail.com", "Dest", 1)
+// dest.city = "Jakarta"
 
 // export {}

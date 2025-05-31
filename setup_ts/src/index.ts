@@ -7,20 +7,38 @@ class User {
 
     // public email: string;
     // private name: string;
-    private readonly city: string = "Jakarta";
+
+    readonly city: string = "Jakarta";
+    private _courseCount = 1;
 
     constructor(
         public email: string, 
         public name: string,
-        private userId: int
+        // private userId: number
     ) {
         this.email = email,
         this.name = name
     }
 
+    get getAppleEmail(): string {
+        return `apple.{$this.email}`
+    }
+
+    get courseCount(): number {
+        return this._courseCount
+    }
+
+    set courseCount(s: number) {
+        if (s <= 1) {
+            throw new Error("course count should not be 1 or below 1")
+        }
+
+        this._courseCount = s
+    }
+
 }
 
-const dest = new User("azkadaiki@gmail.com", "Dest", 1)
+const dest = new User("azkadaiki@gmail.com", "Dest")
 // dest.city = "Jakarta"
 
 // export {}

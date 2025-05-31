@@ -19,4 +19,4 @@ class Instagram extends TakePhoto {
     getSepia() {
     }
 }
-const hitesh = new Instagram("blaba", "jsa");
+// const hitesh = new Instagram("blaba", "jsa");

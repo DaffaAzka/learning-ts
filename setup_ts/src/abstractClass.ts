@@ -29,4 +29,4 @@ class Instagram extends TakePhoto {
 
 }
 
-const hitesh = new Instagram("blaba", "jsa");
+// const hitesh = new Instagram("blaba", "jsa");
